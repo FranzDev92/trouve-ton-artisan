@@ -7,7 +7,7 @@ import Stars from "../components/Stars.jsx";
 
 const API = import.meta.env.VITE_API || "http://localhost:5000";
 
-// Nettoie / prépare l’URL image
+
 const safeSrc = (u) => {
   try {
     if (!u) return null;

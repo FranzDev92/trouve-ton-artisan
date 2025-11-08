@@ -12,12 +12,12 @@ module.exports = function security({allowedOrigin}) {
 
   return [
     helmet({
-      contentSecurityPolicy: false, // simple pour dev; à durcir en prod
+      contentSecurityPolicy: false,
       crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" }
     }),
     cors({
       origin: function (origin, cb) {
-        // autorise le front local uniquement
+        
         if (!origin || origin === allowedOrigin) return cb(null, true);
         return cb(new Error("Not allowed by CORS"));
       },
