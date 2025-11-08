@@ -1,0 +1,12 @@
+const {sequelize}=require("../db");
+const Category=require("./category")(sequelize);
+const Specialty=require("./specialty")(sequelize);
+const Artisan=require("./artisan")(sequelize);
+const ContactMessage=require("./contactMessage")(sequelize);
+Category.hasMany(Specialty,{foreignKey:"category_id"});
+Specialty.belongsTo(Category,{foreignKey:"category_id"});
+Specialty.hasMany(Artisan,{foreignKey:"specialty_id"});
+Artisan.belongsTo(Specialty,{foreignKey:"specialty_id"});
+Artisan.hasMany(ContactMessage,{foreignKey:"artisan_id"});
+ContactMessage.belongsTo(Artisan,{foreignKey:"artisan_id"});
+module.exports={sequelize,Category,Specialty,Artisan,ContactMessage};

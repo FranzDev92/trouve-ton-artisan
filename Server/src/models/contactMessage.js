@@ -1,0 +1,2 @@
+const {DataTypes}=require("sequelize");
+module.exports=(sequelize)=>sequelize.define("contact_message",{id:{type:DataTypes.BIGINT,autoIncrement:true,primaryKey:true},artisan_id:{type:DataTypes.INTEGER,allowNull:false},sender_name:{type:DataTypes.STRING(150),allowNull:false},sender_email:{type:DataTypes.STRING(190),allowNull:false},subject:{type:DataTypes.STRING(180),allowNull:false},message:{type:DataTypes.TEXT,allowNull:false},created_at:{type:DataTypes.DATE,defaultValue:DataTypes.NOW}},{tableName:"contact_messages",timestamps:false});
