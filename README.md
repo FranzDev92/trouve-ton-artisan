@@ -21,41 +21,6 @@ Le site a été conçu pour :
 - s’intégrer à l’environnement numérique régional.
 
 
-## 🧱 Structure du projet
-
-Artisan_devoir/
-├── Client/
-│ └── client/
-│ ├── public/
-│ │ ├── images/artisans/
-│ │ └── favicon.ico
-│ ├── src/
-│ │ ├── components/
-│ │ │ ├── Header.jsx
-│ │ │ ├── Footer.jsx
-│ │ │ └── Stars.jsx
-│ │ ├── pages/
-│ │ │ ├── Home.jsx
-│ │ │ ├── List.jsx
-│ │ │ ├── Artisan.jsx
-│ │ │ └── Legal.jsx
-│ │ ├── App.jsx
-│ │ ├── index.jsx
-│ │ └── index.css
-│ └── package.json
-│
-└── Server/
-└── src/
-├── models/
-│ ├── artisan.js
-│ ├── specialty.js
-│ ├── category.js
-│ └── index.js
-├── routes/
-├── app.js
-├── index.js
-└── seed.sql
-
 
 ## Technologies utilisées
 
@@ -85,3 +50,4 @@ npm run dev
 cd ../Client/client
 npm install
 npm run dev
+
